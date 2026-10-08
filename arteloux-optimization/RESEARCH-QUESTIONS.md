@@ -73,3 +73,12 @@ is written. Answers should be recorded alongside these documents.
 - Which sources of leads are legitimate and permitted for the target segments?
 - What qualification criteria separate a genuine prospect from noise?
 - What communication channel and consent model does AgentMail need to support?
+- CNC intake (a prospect sends only the posted program): which post dialects
+  beyond ESSI (ProCut / SigmaNEST) occur in the target segments, and what does
+  each one hide (kerf already applied to the path, absolute vs incremental
+  moves, multi-torch copies, datum corner)? What minimum the prospect must
+  confirm (thickness, material, plate size and shape) before a before / after
+  comparison is fair?
+- When is a machine-ready return (a post mirroring the prospect's own dialect,
+  verified by reading it back) worth more than the geometry package, and what
+  supervised cut test closes that loop?

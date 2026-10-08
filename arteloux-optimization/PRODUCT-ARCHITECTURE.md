@@ -131,6 +131,25 @@ The existing Earning Automaton may later become the acquisition and
 communication layer; AgentMail may later handle customer communication.
 See COMMERCIAL-HYPOTHESIS.md. Not part of the core product architecture.
 
+## 7a. CNC intake: proof from the customer's own program
+
+Many prospects cannot export parts or a nest; the only thing they can send is
+the program their CAM posted (for ESSI machines a `.cnc` from ProCut /
+SigmaNEST). The intake path reads that program back into geometry: each cut
+contour without its lead-in, holes grouped into parts, identical parts
+counted (mirror images kept apart), the plate inferred from the datum and the
+cut extents, the process from the tool codes. The same parts are then nested
+by the engine and the result is compared with the nest as cut (occupied
+extent, largest free rectangle, cut length, pierces). What the program cannot
+tell (thickness, material, kerf, the real plate shape, torch copies) is asked
+for, never guessed. The deliverable back to the prospect is geometry (the
+package) for their own CAM; a machine program is written only under the
+section 5 rule, and a post that mirrors the prospect's own dialect is the
+candidate for the first validated machine-ready output.
+
+Reference implementation: `arteloux recover-nest` in the private Arteloux
+repository (2026-10-08).
+
 ## 8. SOUP reuse boundary
 
 Keep Arteloux Optimization separate from the production SOUP repository until

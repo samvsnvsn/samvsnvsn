@@ -159,3 +159,13 @@ classify each SOUP component as:
 - genuinely reusable as universal geometry/optimization, or
 - Sigma/metal/process-specific, or
 - reusable only after generalization.
+
+Owner decision 2026-10-08: Arteloux is the reference project and SOUP is the
+quarry. Everything useful is taken over and made Arteloux's own (ported,
+renamed, tested in Arteloux), including the SigmaNEST workspace (`.ws`)
+reader and writer, which earlier guidance excluded. Writing a vendor
+workspace is held to the same standard as every other output: one known
+format revision, a read-back check against the plan, always a new file, and
+acceptance in the vendor application before a customer sees it. The audit's
+classification still decides what is universal and what stays a
+Sigma-specific adapter module.
